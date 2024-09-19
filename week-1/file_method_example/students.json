@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Pesho Doe",
+        "age": 20,
+        "grade": "A"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 22,
+        "grade": "A"
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "age": 21,
+        "grade": "A"
+    },
+    {
+        "id": 4,
+        "name": "Bob Brown",
+        "age": 23,
+        "grade": "C"
+    }
+]
