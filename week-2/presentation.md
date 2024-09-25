@@ -140,5 +140,4 @@
 
 ---
 
-![[Example_Many_To_Many.png]]
 ![Example_Many_To_Many](/Attachments/Example_Many_To_Many.png)
