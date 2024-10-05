@@ -258,7 +258,6 @@ CREATE TABLE classes (
 
 ---
 
-![[Many_To_Many_Implementation.png]]
 ![Many_To_Many_Implementation](/Attachments/Many_To_Many_Implementation.png)
 
 ---
