@@ -1,3 +1,6 @@
+-- Use the 'abcd' database about a fictional school from the 'school.sql' file in the 'databases' folder
+USE abcd;
+
 -- Select a student with a specific student number
 SELECT * FROM students
 WHERE number = 10201;
