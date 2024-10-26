@@ -15,7 +15,7 @@ CREATE TABLE students(
     email VARCHAR(255) NOT NULL UNIQUE,        -- Student's email, must be unique and cannot be NULL
     class_number INT NOT NULL,                 -- Class number the student belongs to (foreign key)
     FOREIGN KEY (class_number) REFERENCES classes(number)  -- Set a foreign key constraint on 'class_number' to reference the 'classes' table
-);
+) ENGINE=InnoDB   DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Create the 'classes' table to store information about classes
 CREATE TABLE classes(
@@ -23,7 +23,7 @@ CREATE TABLE classes(
     number_of_students INT NOT NULL,           -- Number of students in the class
     leader_id INT NOT NULL UNIQUE,             -- Teacher assigned as class leader (foreign key)
     FOREIGN KEY (leader_id) REFERENCES teachers(id)  -- Set a foreign key constraint on 'leader_id' to reference the 'teachers' table
-);
+) ENGINE=InnoDB   DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Create the 'teachers' table to store information about teachers
 CREATE TABLE teachers(
@@ -31,14 +31,14 @@ CREATE TABLE teachers(
     name VARCHAR(255) NOT NULL,                -- Teacher's name, cannot be NULL
     salary FLOAT NOT NULL,                     -- Teacher's salary
     email VARCHAR(255) UNIQUE NOT NULL         -- Teacher's email, must be unique and cannot be NULL
-);
+)  ENGINE=InnoDB   DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Create the 'subjects' table to store information about subjects
 CREATE TABLE subjects(
     id INT PRIMARY KEY AUTO_INCREMENT,         -- Primary key for each subject (auto-incremented)
     name VARCHAR(255) NOT NULL,                -- Subject name, cannot be NULL
     type VARCHAR(255) NOT NULL                 -- Type of subject (e.g., lecture, lab), cannot be NULL
-);
+) ENGINE=InnoDB   DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Create the 'subjects_teachers' table for the many-to-many relationship between subjects and teachers
 CREATE TABLE subjects_teachers(
@@ -47,7 +47,7 @@ CREATE TABLE subjects_teachers(
     FOREIGN KEY (subject_id) REFERENCES subjects(id),   -- Set foreign key constraint on 'subject_id'
     FOREIGN KEY (teacher_id) REFERENCES teachers(id),   -- Set foreign key constraint on 'teacher_id'
     PRIMARY KEY(subject_id, teacher_id)        -- Composite primary key combining 'subject_id' and 'teacher_id'
-);
+)  ENGINE=InnoDB   DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Re-enable foreign key checks after all tables have been created
 SET FOREIGN_KEY_CHECKS=1;
@@ -92,3 +92,4 @@ SELECT * FROM classes;
 SELECT * FROM students;
 SELECT * FROM subjects;
 SELECT * FROM subjects_teachers;
+
