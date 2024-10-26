@@ -107,11 +107,11 @@ CREATE TABLE passports(
 
 ---
 
-![[/Attachments/Databases_Working_With_Data_Pic_13.png]]
+![](/Attachments/Databases_Working_With_Data_Pic_13.png)
 
 ---
 
-![[/Attachments/Databases_Working_With_Data_Pic_14.png]]
+![](/Attachments/Databases_Working_With_Data_Pic_14.png)
 
 ---
 
