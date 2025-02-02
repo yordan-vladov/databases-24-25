@@ -134,7 +134,24 @@ CREATE TABLE students(
 ```
 
 ---
+
 ```sql
 SELECT class_number, group_number, count(*) students FROM students
 GROUP BY class_number, group_number;
+```
+---
+
+## HAVING
+
+- Прилагаме ограничение върху групите, които ще се изведат в заявката.
+- Пример: Намерете учителите, които водят 2 или повече предмета
+
+---
+
+```mysql
+SELECT t.name, COUNT(*) subjects FROM
+teachers t JOIN subjects_teachers st
+ON t.id = st.subject_id
+GROUP BY t.id
+HAVING subjects >= 2;
 ```
