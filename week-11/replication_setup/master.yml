@@ -1,0 +1,15 @@
+services:
+  mysql-one:
+    image: mysql:8.0
+    container_name: mysql-one
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234" # Set the root password
+    command: [mysqld, --default-authentication-plugin=mysql_native_password]
+    volumes:
+      - ./master.cnf:/etc/mysql/conf.d/my.cnf # Path to the custom MySQL configuration file
+    ports:
+      - "3306:3306" # Expose MySQL on port 3306
+volumes:
+  mysql_data:
+    driver: local

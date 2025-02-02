@@ -1,0 +1,15 @@
+services:
+  mysql-two:
+    image: mysql:8.0
+    container_name: mysql-two
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234" # Set the root password
+    command: [mysqld, --default-authentication-plugin=mysql_native_password]
+    volumes:
+      - ./slave.cnf:/etc/mysql/conf.d/my.cnf # Path to the custom MySQL configuration file
+    ports:
+      - "3307:3306" # Expose MySQL on port 3307
+volumes:
+  mysql_data:
+    driver: local
