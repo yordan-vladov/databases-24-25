@@ -237,7 +237,7 @@ ON table_name(column_name(length));
 ---
 ## Префиксен индекс - Пример
 
-![[Pasted image 20241130105216.png|400]]
+![](/Attachments/DB-Indexes-Pic-1.png)
 
 ---
 - Искаме да индексираме колоната **productName**
@@ -298,7 +298,7 @@ ON table_name ((fn));
 ---
 ## Функционален индекс - Пример
 
-![[Pasted image 20241130111204.png|300]]
+![](/Attachments/DB-Indexes-Pic-2.png)
 
 ---
 - Искаме да забързаме следната заявка
